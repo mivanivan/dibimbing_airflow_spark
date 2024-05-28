@@ -12,7 +12,7 @@ default_args = {
 spark_dag = DAG(
     dag_id="assignment-batch-processing",
     default_args=default_args,
-    schedule_interval='@day'
+    schedule_interval='@day',
     dagrun_timeout=timedelta(minutes=60),
     description="Test for spark submit",
     start_date=days_ago(1)
